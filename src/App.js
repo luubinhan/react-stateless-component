@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Price from './Price';
+import InputNumber from './InputNumber';
 
 class App extends Component {
+  _change = (e, value) => {
+  }
   render() {
     return (
       <div className="App">
@@ -12,7 +14,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <Price price='100000' salePrice='20000' />
+          <InputNumber onChange={this._change} />
         </header>
       </div>
     );
