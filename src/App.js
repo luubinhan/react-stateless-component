@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import InputNumber from './InputNumber';
+import Avatar from './Avatar';
 
 class App extends Component {
   _change = (e, value) => {
@@ -14,7 +14,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <InputNumber onChange={this._change} />
+          <Avatar name="anluu binh" />
         </header>
       </div>
     );
