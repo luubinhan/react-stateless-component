@@ -9,20 +9,23 @@ import SaleTag from './components/SaleTag';
 const Price = ({ price, symbol, salePrice }) => {
   const currentPrice = salePrice ? Number(salePrice) : Number(price);
   let downPrice = 0;
+  let _salePrice = 0;
+  let _price = 0;
+
   if (salePrice) {
-    salePrice = Number(salePrice);
-    price = Number(price);
+    _salePrice = Number(salePrice);
+    _price = Number(price);
     // caculate percent
-    downPrice = Math.round((salePrice / price) * 100);
+    downPrice = Math.round((_salePrice / _price) * 100);
   }
 
   return (
     <PriceAmount>
       {salePrice ? (
-          <SalePrice>
-            <Price price={price} />
-          </SalePrice>
-        ) : null
+        <SalePrice>
+          <Price price={_price} />
+        </SalePrice>
+      ) : null
       }
       <Amount>
         {currentPrice.toLocaleString(currentPrice, 'vi-VN')}

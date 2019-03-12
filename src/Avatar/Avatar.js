@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import getIconByName from './helpers/getIconByName';
 import './Avatar.scss';
 
-const Avatar = ({ name, src }) => {
+const Avatar = ({ name, src, className }) => {
   const iconName = getIconByName(name);
   const classIcon = name ? 'color-' + name.charAt(0).toLowerCase() : '';
   return (
-    <div className="app-logo">
+    <div className={`app-logo ${className}`}>
       {(src) ? (
         <div className="img-logo">
           <img src={src} alt={name} />
@@ -23,11 +23,13 @@ const Avatar = ({ name, src }) => {
 
 Avatar.propTypes = {
   name: PropTypes.string.isRequired,
-  src: PropTypes.string
+  src: PropTypes.string,
+  className: PropTypes.string
 };
 
 Avatar.defaultProps = {
-  src: ''
+  src: '',
+  className: ''
 };
 
 export default Avatar;

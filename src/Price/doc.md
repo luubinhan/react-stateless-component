@@ -9,3 +9,14 @@ Display price in format
 | `price`     |         | {string, number} |                   price value |
 | `salePrice` |    0    | {string, number} |                    sale price |
 | `symbol`    |    đ    |         {string} | symbol to display after price |
+
+
+## Sample
+
+```jsx
+import Price from 'components/Price';
+
+<Price price="5000" />
+<Price price="5000" salePrice="4000" />
+<Price price="5000" symbol="USD" />
+```
