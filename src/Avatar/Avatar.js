@@ -5,7 +5,10 @@ import './Avatar.scss';
 
 const Avatar = ({ name, src, className }) => {
   const iconName = getIconByName(name);
-  const classIcon = name ? 'color-' + name.charAt(0).toLowerCase() : '';
+  let classIcon = '';
+  if (name) {
+    classIcon = `color-${name.charAt(0).toLowerCase()}`;
+  }
   return (
     <div className={`app-logo ${className}`}>
       {(src) ? (
