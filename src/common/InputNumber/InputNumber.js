@@ -7,7 +7,7 @@ class InputNumber extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stateValue: props.defaultValue
+      stateValue: props.min
     };
   }
 
@@ -116,16 +116,12 @@ InputNumber.propTypes = {
   // step value
   step: PropTypes.number,
 
-  // input value
-  defaultValue: PropTypes.number,
-
   // function call after value has change
   onChange: PropTypes.func.isRequired
 };
 
 InputNumber.defaultProps = {
   className: '',
-  defaultValue: 1,
   min: 1,
   max: 10,
   step: 1

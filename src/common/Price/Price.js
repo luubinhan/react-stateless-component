@@ -6,7 +6,7 @@ import Amount from './components/Amount';
 import CurrentSymbol from './components/CurrentSymbol';
 import SaleTag from './components/SaleTag';
 
-const Price = ({ price, symbol, salePrice }) => {
+const Price = ({ price, symbol, salePrice, locale }) => {
   const currentPrice = salePrice ? Number(salePrice) : Number(price);
   let downPrice = 0;
   let _salePrice = 0;
@@ -16,7 +16,8 @@ const Price = ({ price, symbol, salePrice }) => {
     _salePrice = Number(salePrice);
     _price = Number(price);
     // caculate percent
-    downPrice = Math.round((_salePrice / _price) * 100);
+    downPrice = Math.round(((_price - _salePrice) / _price) * 100);
+    // downPrice = Math.round((_salePrice / _price) * 100);
   }
 
   return (
@@ -28,7 +29,7 @@ const Price = ({ price, symbol, salePrice }) => {
       ) : null
       }
       <Amount>
-        {currentPrice.toLocaleString(currentPrice, 'vi-VN')}
+        {currentPrice.toLocaleString(currentPrice, locale)}
       </Amount>
       <CurrentSymbol>{symbol}</CurrentSymbol>
       { salePrice
@@ -48,9 +49,11 @@ Price.propTypes = {
     PropTypes.number,
     PropTypes.string
   ]),
+  locale: PropTypes.string,
   symbol: PropTypes.string
 };
 Price.defaultProps = {
+  locale: 'vi-VN',
   symbol: 'đ',
   salePrice: 0
 };

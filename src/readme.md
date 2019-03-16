@@ -1,6 +1,6 @@
 # Dependencies
 
-npm i node-sass prop-types --save
+npm i node-sass prop-types styled-components --save
 
 # Calendar
 

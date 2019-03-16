@@ -9,6 +9,7 @@ Display price in format
 | `price`     |         | {string, number} |                   price value |
 | `salePrice` |    0    | {string, number} |                    sale price |
 | `symbol`    |    đ    |         {string} | symbol to display after price |
+| `locale`    |    vi-VN    |         {string} | A string with a BCP 47 language tag, ex: en-GB, ja-JP, vi-VN, ko-KR |
 
 
 ## Sample

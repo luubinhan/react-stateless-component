@@ -8,12 +8,12 @@ import { themes } from '@storybook/theming';
 const req = require.context('../common', true, /\.stories\.js$/);
 
 // Option defaults.
-/* addParameters({
+addParameters({
   options: {
     name: 'Foo',
-    theme: themes.dark
+    theme: themes.light
   }
-}); */
+});
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
