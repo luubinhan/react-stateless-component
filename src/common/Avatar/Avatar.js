@@ -10,13 +10,13 @@ const Avatar = ({ name, src, className }) => {
     classIcon = `color-${name.charAt(0).toLowerCase()}`;
   }
   return (
-    <div className={`app-logo ${className}`}>
+    <div className={`c-avatar ${className}`}>
       {(src) ? (
-        <div className="img-logo">
+        <div className="c-avatar__img">
           <img src={src} alt={name} />
         </div>
       ) : (
-        <div className={`app-icon ${classIcon}`}>
+        <div className={`c-avatar__name ${classIcon}`}>
           {iconName}
         </div>
       )}
