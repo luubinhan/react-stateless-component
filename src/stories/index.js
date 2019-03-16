@@ -10,7 +10,7 @@ const req = require.context('../common', true, /\.stories\.js$/);
 // Option defaults.
 addParameters({
   options: {
-    name: 'Foo',
+    name: 'React Base UI',
     theme: themes.light
   }
 });
