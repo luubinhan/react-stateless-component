@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Avatar from 'common/Avatar';
 import logo from './logo.svg';
 import './App.css';
-import Avatar from './Avatar';
 
 class App extends Component {
   _change = (e, value) => {

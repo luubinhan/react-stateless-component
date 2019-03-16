@@ -87,7 +87,7 @@
       0,
       {
         "vars": "none",
-        "args": "none", //"after-used",
+        "args": "none",
         "varsIgnorePattern": "hJSX"
       }
     ],
@@ -117,7 +117,7 @@
     "no-throw-literal": 2,
     "no-unused-expressions": 0,
     "no-with": 2,
-    "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
+    "import/no-unresolved": [0, {"commonjs": true, "amd": true}],
     "import/named": 2,
     "import/namespace": 2,
     "import/default": 2,

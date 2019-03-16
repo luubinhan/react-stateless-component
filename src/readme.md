@@ -1,3 +1,7 @@
+# Dependencies
+
+npm i node-sass prop-types --save
+
 # Calendar
 
 # Toastify
